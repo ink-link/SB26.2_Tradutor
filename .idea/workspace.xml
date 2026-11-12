@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BackendCodeEditorMiscSettings">
+    <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
+    <option name="/Default/Housekeeping/GlobalSettingsUpgraded/IsUpgraded/@EntryValue" value="true" type="bool" />
+    <option name="/Default/RiderDebugger/RiderRestoreDecompile/RestoreDecompileSetting/@EntryValue" value="false" type="bool" />
+  </component>
+  <component name="CMakeProjectFlavorService">
+    <option name="flavorId" value="CMakePlainProjectFlavor" />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ac008aa0-3e14-49e3-86cf-3439b9a98081" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/run_tests.sh" beforeDir="false" afterPath="$PROJECT_DIR$/tests/run_tests.sh" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_C:/Users/luisf/CLionProjects/SB26.2_Tradutor" value="3LqGkrvdeWZ2fCjc8EZSangT5NC" />
+    </persistenceIdMap>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Luis-Moon&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ink-link/SB26.2_Tradutor.git&quot;,
+    &quot;accountId&quot;: &quot;e4ed3ab5-96f6-407e-bcd0-75ec7fe8ce8e&quot;
+  }
+}</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock://diff.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://diff.h" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.7661196763462144" />
+      <entry key="MS500" value="4.001483418957781" />
+      <entry key="S2" value="5.939415923329393" />
+      <entry key="S5" value="7.086420547826514" />
+      <entry key="S10" value="10.260313573527238" />
+      <entry key="S30" value="26.863227843172492" />
+      <entry key="S60" value="44.093286011607546" />
+      <entry key="M2" value="59.95940551594817" />
+      <entry key="M5" value="73.94036953643561" />
+      <entry key="M10" value="80.96476872388364" />
+      <entry key="M15" value="84.31312596013032" />
+      <entry key="M30" value="88.74497229001732" />
+      <entry key="H1" value="91.58104806215806" />
+      <entry key="H2" value="93.20772700512245" />
+      <entry key="H4" value="94.11199642338725" />
+      <entry key="D1" value="111.76980837069793" />
+      <entry key="W1" value="145.0545109687984" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="0.0" />
+      <entry key="S10" value="0.0" />
+      <entry key="S30" value="0.0" />
+      <entry key="S60" value="0.0" />
+      <entry key="M2" value="0.0" />
+      <entry key="M5" value="5.867735148861918E-159" />
+      <entry key="M10" value="7.660114326080229E-80" />
+      <entry key="M15" value="1.8036689720320544E-53" />
+      <entry key="M30" value="4.246962410985138E-27" />
+      <entry key="H1" value="6.516872264349754E-14" />
+      <entry key="H2" value="2.552816535583736E-7" />
+      <entry key="H4" value="5.052540485323912E-4" />
+      <entry key="D1" value="0.28221816714375514" />
+      <entry key="W1" value="0.8346648760956933" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="1.6541235977754325" />
+      <entry key="MS500" value="3.8955198248795186" />
+      <entry key="S2" value="5.897615284293282" />
+      <entry key="S5" value="7.064752530283728" />
+      <entry key="S10" value="10.241814265630572" />
+      <entry key="S30" value="26.847611618469013" />
+      <entry key="S60" value="44.0816335926158" />
+      <entry key="M2" value="59.95195585926645" />
+      <entry key="M5" value="73.93675626125933" />
+      <entry key="M10" value="80.96265204512368" />
+      <entry key="M15" value="84.31156782466859" />
+      <entry key="M30" value="88.74407541681455" />
+      <entry key="H1" value="91.58055730343489" />
+      <entry key="H2" value="93.20746911999474" />
+      <entry key="H4" value="94.1123690348101" />
+      <entry key="D1" value="112.05199793868874" />
+      <entry key="W1" value="145.8891700705454" />
+    </decayedShown>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3LqDt2b8iqiq2iYGN7PthFPPFlY" />
+  <component name="ProjectSessionTemplates">
+    <option name="panelTemplate">
+      <template>
+        <option name="ensembleEnabled" value="true" />
+        <option name="ensembleTierId" value="balance" />
+        <option name="modeId" value="Agent" />
+        <option name="model">
+          <model>
+            <option name="modelType" value="builtin_id" />
+            <option name="modelValue" value="ensemble" />
+          </model>
+        </option>
+        <option name="targetType" value="BACKGROUND" />
+        <option name="worktreeMode" value="WORKSPACE" />
+      </template>
+    </option>
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "CidrDebugProfileConversion": "true",
+    "CidrDebugProfileConversion262": "true",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.RadMigrateCodeStyle": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "copilot.chat.legacySessionMetadata.migrated": "true",
+    "git-widget-placeholder": "#1 on feat",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "python.packages.toolwindow.project.migrated.to.right.top.v2": "true",
+    "settings.editor.selected.configurable": "com.github.copilot.settings.chat.ChatConfigurable"
+  }
+}]]></component>
+  <component name="SelectedDebugProfileService">{
+  &quot;profileIdByStamp&quot;: [],
+  &quot;modificationCount&quot;: 1
+}</component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ac008aa0-3e14-49e3-86cf-3439b9a98081" name="Changes" comment="" />
+      <created>1794172926551</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1794172926551</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

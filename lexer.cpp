@@ -1,137 +1,129 @@
 #include "lexer.h"
-#include <iostream>
+
+#include <cctype>
 #include <fstream>
 #include <sstream>
-#include <algorithm>
-#include <cctype>
+#include <utility>
 
-std::string toUpper(std::string str) {
-    std::transform(str.begin(), str.end(), str.begin(), ::toupper);
-    return str;
+namespace {
+std::string stripComment(const std::string& line) {
+    const std::size_t position = line.find(';');
+    return position == std::string::npos ? line : line.substr(0, position);
+}
 }
 
-// Remove tudo a partir do caractere ';'
-static std::string stripComment(const std::string& line) {
-    size_t pos = line.find(';');
-    if (pos != std::string::npos) {
-        return line.substr(0, pos);
+std::string toUpper(std::string value) {
+    for (char& character : value) {
+        character = static_cast<char>(
+            std::toupper(static_cast<unsigned char>(character)));
     }
-    return line;
+    return value;
 }
 
-// Validações Léxicas do Rótulo segundo o documento:
-// 1. Limite de 30 caracteres
-// 2. Composto por letras, números ou '_'
-// 3. Primeiro caractere não pode ser um número
 bool isValidLabel(const std::string& label, std::string& errorMsg) {
     if (label.empty()) {
-        errorMsg = "Rótulo vazio";
+        errorMsg = "rotulo vazio";
         return false;
     }
-
-    if (label.length() > 30) {
-        errorMsg = "Rótulo '" + label + "' excede o limite de 30 caracteres";
+    if (label.size() > 30) {
+        errorMsg = "rotulo '" + label + "' excede 30 caracteres";
         return false;
     }
-
-    if (std::isdigit(static_cast<unsigned char>(label[0]))) {
-        errorMsg = "Rótulo '" + label + "' não pode começar com um número";
+    const auto first = static_cast<unsigned char>(label.front());
+    if (!std::isalpha(first) && label.front() != '_') {
+        errorMsg = "rotulo '" + label + "' deve comecar com letra ou '_'";
         return false;
     }
-
-    for (char c : label) {
-        if (!std::isalnum(static_cast<unsigned char>(c)) && c != '_') {
-            errorMsg = "Caractere inválido '" + std::string(1, c) + "' no rótulo '" + label + "'";
+    for (char character : label) {
+        const auto value = static_cast<unsigned char>(character);
+        if (!std::isalnum(value) && character != '_') {
+            errorMsg = "caractere invalido no rotulo '" + label + "'";
             return false;
         }
     }
-
     return true;
 }
 
-void parseFile(const std::string& filename, 
-               std::vector<LineData>& parsedLines, 
-               std::vector<AssemblyError>& errors) {
-    
+void readSourceLines(const std::string& filename,
+                     std::vector<SourceLine>& lines,
+                     std::vector<AssemblyError>& errors) {
     std::ifstream file(filename);
-    if (!file.is_open()) {
-        std::cerr << "Erro ao abrir o arquivo: " << filename << std::endl;
+    if (!file) {
+        errors.push_back({1, "SINTATICO", "nao foi possivel abrir o arquivo '" +
+                                              filename + "'"});
         return;
     }
 
-    std::string currentLine;
-    int lineNumber = 0;
-    std::string pendingLabel = ""; // Armazena rótulos que ficaram isolados em uma linha
-
-    while (std::getline(file, currentLine)) {
-        lineNumber++;
-        
-        // 1. Limpar comentários e padronizar para MAIÚSCULAS
-        std::string clean = stripComment(currentLine);
-        clean = toUpper(clean);
-
-        // 2. Tokenizar a linha usando espaços/tabs
-        std::stringstream ss(clean);
-        std::vector<std::string> tokens;
+    std::string original;
+    int number = 0;
+    while (std::getline(file, original)) {
+        ++number;
+        const std::string clean = stripComment(original);
+        std::istringstream stream(clean);
+        SourceLine line{number, original, {}};
         std::string token;
-        while (ss >> token) {
-            tokens.push_back(token);
+        while (stream >> token) {
+            line.tokens.push_back(toUpper(token));
         }
+        if (!line.tokens.empty()) {
+            lines.push_back(std::move(line));
+        }
+    }
+}
 
-        // Se a linha for vazia ou contiver apenas comentários, ignora
-        if (tokens.empty()) {
+void parseFile(const std::string& filename,
+               std::vector<LineData>& lines,
+               std::vector<AssemblyError>& errors) {
+    std::vector<SourceLine> source;
+    readSourceLines(filename, source, errors);
+    std::vector<std::string> pendingLabels;
+    std::vector<int> pendingLines;
+
+    for (const SourceLine& sourceLine : source) {
+        std::size_t index = 0;
+        LineData line;
+        line.originalLineNumber = sourceLine.lineNumber;
+        while (index < sourceLine.tokens.size() &&
+               sourceLine.tokens[index].back() == ':') {
+            std::string label = sourceLine.tokens[index].substr(
+                0, sourceLine.tokens[index].size() - 1);
+            std::string message;
+            if (!isValidLabel(label, message)) {
+                errors.push_back({sourceLine.lineNumber, "LEXICO", message});
+            }
+            if (index > 0) {
+                errors.push_back({sourceLine.lineNumber, "SINTATICO",
+                                  "dois rotulos na mesma linha"});
+            }
+            line.labels.push_back(label);
+            line.labelLines.push_back(sourceLine.lineNumber);
+            ++index;
+        }
+        if (index == sourceLine.tokens.size()) {
+            pendingLabels.insert(pendingLabels.end(), line.labels.begin(),
+                                 line.labels.end());
+            pendingLines.insert(pendingLines.end(), line.labelLines.begin(),
+                                line.labelLines.end());
             continue;
         }
-
-        LineData lineData;
-        lineData.originalLineNumber = lineNumber;
-
-        size_t tokenIndex = 0;
-
-        // 3. Verificar se o primeiro token é um Rótulo (termina com ':')
-        if (tokens[tokenIndex].back() == ':') {
-            std::string labelName = tokens[tokenIndex].substr(0, tokens[tokenIndex].size() - 1);
-            
-            // Validar Léxico do Rótulo
-            std::string err;
-            if (!isValidLabel(labelName, err)) {
-                errors.push_back({lineNumber, "LEXICO", err});
-            }
-
-            if (!pendingLabel.empty()) {
-                errors.push_back({lineNumber, "SEMANTICO", "Dois rótulos consecutivos na mesma instrução"});
-            }
-
-            pendingLabel = labelName;
-            tokenIndex++;
+        if (index > 0 && index + 1 < sourceLine.tokens.size() &&
+            sourceLine.tokens[index + 1].back() == ':') {
+            errors.push_back({sourceLine.lineNumber, "SINTATICO",
+                              "dois rotulos na mesma linha"});
         }
-
-        // Se a linha continha APENAS o rótulo (ex: "ROT:"), guarda o rótulo e vai pra próxima linha
-        if (tokenIndex >= tokens.size()) {
-            continue;
-        }
-
-        // Associa o rótulo (pendente ou da linha atual) à instrução atual
-        if (!pendingLabel.empty()) {
-            lineData.label = pendingLabel;
-            pendingLabel = ""; // Reseta a pendência
-        }
-
-        // 4. Capturar a Instrução/Diretiva
-        lineData.instruction = tokens[tokenIndex++];
-
-        // 5. Capturar Argumentos/Operandos
-        while (tokenIndex < tokens.size()) {
-            lineData.args.push_back(tokens[tokenIndex++]);
-        }
-
-        parsedLines.push_back(lineData);
+        line.labels.insert(line.labels.begin(), pendingLabels.begin(),
+                           pendingLabels.end());
+        line.labelLines.insert(line.labelLines.begin(), pendingLines.begin(),
+                               pendingLines.end());
+        pendingLabels.clear();
+        pendingLines.clear();
+        line.instruction = sourceLine.tokens[index++];
+        line.args.assign(sourceLine.tokens.begin() + static_cast<std::ptrdiff_t>(index),
+                         sourceLine.tokens.end());
+        lines.push_back(std::move(line));
     }
-
-    // Erro caso o arquivo termine com um rótulo pendente sem instrução
-    if (!pendingLabel.empty()) {
-        errors.push_back({lineNumber, "SINTATICO", "Rótulo '" + pendingLabel + "' no final do arquivo sem instrução associada"});
+    if (!pendingLabels.empty()) {
+        errors.push_back({pendingLines.back(), "SINTATICO",
+                          "rotulo no fim do arquivo sem operacao"});
     }
-
-    file.close();
 }
