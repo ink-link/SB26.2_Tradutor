@@ -17,7 +17,11 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac008aa0-3e14-49e3-86cf-3439b9a98081" name="Changes" comment="" />
+    <list default="true" id="ac008aa0-3e14-49e3-86cf-3439b9a98081" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/run_tests.sh" beforeDir="false" afterPath="$PROJECT_DIR$/tests/run_tests.sh" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,23 +56,23 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0038806481333518" />
-      <entry key="MS500" value="1.7719945824550027" />
-      <entry key="S2" value="3.1342566692343596" />
-      <entry key="S5" value="3.7239328446186373" />
-      <entry key="S10" value="4.600585285844782" />
-      <entry key="S30" value="6.99540204668852" />
-      <entry key="S60" value="8.252883190642605" />
-      <entry key="M2" value="9.054545764002338" />
-      <entry key="M5" value="9.60297831523057" />
-      <entry key="M10" value="9.798206861518599" />
-      <entry key="M15" value="9.864730913725628" />
-      <entry key="M30" value="9.931992522733609" />
-      <entry key="H1" value="9.965902504724417" />
-      <entry key="H2" value="9.982945178635447" />
-      <entry key="H4" value="10.023796931844023" />
-      <entry key="D1" value="27.114954871179748" />
-      <entry key="W1" value="60.15676735255596" />
+      <entry key="MS100" value="1.7661196763462144" />
+      <entry key="MS500" value="4.001483418957781" />
+      <entry key="S2" value="5.939415923329393" />
+      <entry key="S5" value="7.086420547826514" />
+      <entry key="S10" value="10.260313573527238" />
+      <entry key="S30" value="26.863227843172492" />
+      <entry key="S60" value="44.093286011607546" />
+      <entry key="M2" value="59.95940551594817" />
+      <entry key="M5" value="73.94036953643561" />
+      <entry key="M10" value="80.96476872388364" />
+      <entry key="M15" value="84.31312596013032" />
+      <entry key="M30" value="88.74497229001732" />
+      <entry key="H1" value="91.58104806215806" />
+      <entry key="H2" value="93.20772700512245" />
+      <entry key="H4" value="94.11199642338725" />
+      <entry key="D1" value="111.76980837069793" />
+      <entry key="W1" value="145.0545109687984" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
@@ -79,34 +83,34 @@
       <entry key="S30" value="0.0" />
       <entry key="S60" value="0.0" />
       <entry key="M2" value="0.0" />
-      <entry key="M5" value="1.4693257024702712E-157" />
-      <entry key="M10" value="3.8331784493684517E-79" />
-      <entry key="M15" value="5.276825004332779E-53" />
-      <entry key="M30" value="7.264175799313216E-27" />
-      <entry key="H1" value="8.523013433823282E-14" />
-      <entry key="H2" value="2.919420050938761E-7" />
-      <entry key="H4" value="5.403165785850698E-4" />
-      <entry key="D1" value="0.2853917287563856" />
-      <entry key="W1" value="0.835999296051355" />
+      <entry key="M5" value="5.867735148861918E-159" />
+      <entry key="M10" value="7.660114326080229E-80" />
+      <entry key="M15" value="1.8036689720320544E-53" />
+      <entry key="M30" value="4.246962410985138E-27" />
+      <entry key="H1" value="6.516872264349754E-14" />
+      <entry key="H2" value="2.552816535583736E-7" />
+      <entry key="H4" value="5.052540485323912E-4" />
+      <entry key="D1" value="0.28221816714375514" />
+      <entry key="W1" value="0.8346648760956933" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.01822299187056587" />
-      <entry key="MS500" value="1.1793501559871338" />
-      <entry key="S2" value="2.9278638727262645" />
-      <entry key="S5" value="3.6339371592837595" />
-      <entry key="S10" value="4.550889890638141" />
-      <entry key="S30" value="6.974678967921887" />
-      <entry key="S60" value="8.241433238817555" />
-      <entry key="M2" value="9.048473920099733" />
-      <entry key="M5" value="9.600454659431845" />
-      <entry key="M10" value="9.796928139103507" />
-      <entry key="M15" value="9.863874594219332" />
-      <entry key="M30" value="9.931562422748165" />
-      <entry key="H1" value="9.965686965645373" />
-      <entry key="H2" value="9.982837578185778" />
-      <entry key="H4" value="10.024283203016655" />
-      <entry key="D1" value="27.40033154616799" />
-      <entry key="W1" value="60.992762827833396" />
+      <entry key="MS100" value="1.6541235977754325" />
+      <entry key="MS500" value="3.8955198248795186" />
+      <entry key="S2" value="5.897615284293282" />
+      <entry key="S5" value="7.064752530283728" />
+      <entry key="S10" value="10.241814265630572" />
+      <entry key="S30" value="26.847611618469013" />
+      <entry key="S60" value="44.0816335926158" />
+      <entry key="M2" value="59.95195585926645" />
+      <entry key="M5" value="73.93675626125933" />
+      <entry key="M10" value="80.96265204512368" />
+      <entry key="M15" value="84.31156782466859" />
+      <entry key="M30" value="88.74407541681455" />
+      <entry key="H1" value="91.58055730343489" />
+      <entry key="H2" value="93.20746911999474" />
+      <entry key="H4" value="94.1123690348101" />
+      <entry key="D1" value="112.05199793868874" />
+      <entry key="W1" value="145.8891700705454" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -141,6 +145,7 @@
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "CidrDebugProfileConversion": "true",
     "CidrDebugProfileConversion262": "true",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.RadMigrateCodeStyle": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
@@ -151,6 +156,7 @@
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "copilot.chat.legacySessionMetadata.migrated": "true",
+    "git-widget-placeholder": "#1 on feat",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
