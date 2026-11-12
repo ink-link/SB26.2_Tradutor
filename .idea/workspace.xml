@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BackendCodeEditorMiscSettings">
+    <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
+    <option name="/Default/Housekeeping/GlobalSettingsUpgraded/IsUpgraded/@EntryValue" value="true" type="bool" />
+    <option name="/Default/RiderDebugger/RiderRestoreDecompile/RestoreDecompileSetting/@EntryValue" value="false" type="bool" />
+  </component>
+  <component name="CMakeProjectFlavorService">
+    <option name="flavorId" value="CMakePlainProjectFlavor" />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ac008aa0-3e14-49e3-86cf-3439b9a98081" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_C:/Users/luisf/CLionProjects/SB26.2_Tradutor" value="3LqGkrvdeWZ2fCjc8EZSangT5NC" />
+    </persistenceIdMap>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Luis-Moon&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ink-link/SB26.2_Tradutor.git&quot;,
+    &quot;accountId&quot;: &quot;e4ed3ab5-96f6-407e-bcd0-75ec7fe8ce8e&quot;
+  }
+}</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock://diff.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://diff.h" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0038806481333518" />
+      <entry key="MS500" value="1.7719945824550027" />
+      <entry key="S2" value="3.1342566692343596" />
+      <entry key="S5" value="3.7239328446186373" />
+      <entry key="S10" value="4.600585285844782" />
+      <entry key="S30" value="6.99540204668852" />
+      <entry key="S60" value="8.252883190642605" />
+      <entry key="M2" value="9.054545764002338" />
+      <entry key="M5" value="9.60297831523057" />
+      <entry key="M10" value="9.798206861518599" />
+      <entry key="M15" value="9.864730913725628" />
+      <entry key="M30" value="9.931992522733609" />
+      <entry key="H1" value="9.965902504724417" />
+      <entry key="H2" value="9.982945178635447" />
+      <entry key="H4" value="10.023796931844023" />
+      <entry key="D1" value="27.114954871179748" />
+      <entry key="W1" value="60.15676735255596" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="0.0" />
+      <entry key="S10" value="0.0" />
+      <entry key="S30" value="0.0" />
+      <entry key="S60" value="0.0" />
+      <entry key="M2" value="0.0" />
+      <entry key="M5" value="1.4693257024702712E-157" />
+      <entry key="M10" value="3.8331784493684517E-79" />
+      <entry key="M15" value="5.276825004332779E-53" />
+      <entry key="M30" value="7.264175799313216E-27" />
+      <entry key="H1" value="8.523013433823282E-14" />
+      <entry key="H2" value="2.919420050938761E-7" />
+      <entry key="H4" value="5.403165785850698E-4" />
+      <entry key="D1" value="0.2853917287563856" />
+      <entry key="W1" value="0.835999296051355" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="0.01822299187056587" />
+      <entry key="MS500" value="1.1793501559871338" />
+      <entry key="S2" value="2.9278638727262645" />
+      <entry key="S5" value="3.6339371592837595" />
+      <entry key="S10" value="4.550889890638141" />
+      <entry key="S30" value="6.974678967921887" />
+      <entry key="S60" value="8.241433238817555" />
+      <entry key="M2" value="9.048473920099733" />
+      <entry key="M5" value="9.600454659431845" />
+      <entry key="M10" value="9.796928139103507" />
+      <entry key="M15" value="9.863874594219332" />
+      <entry key="M30" value="9.931562422748165" />
+      <entry key="H1" value="9.965686965645373" />
+      <entry key="H2" value="9.982837578185778" />
+      <entry key="H4" value="10.024283203016655" />
+      <entry key="D1" value="27.40033154616799" />
+      <entry key="W1" value="60.992762827833396" />
+    </decayedShown>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3LqDt2b8iqiq2iYGN7PthFPPFlY" />
+  <component name="ProjectSessionTemplates">
+    <option name="panelTemplate">
+      <template>
+        <option name="ensembleEnabled" value="true" />
+        <option name="ensembleTierId" value="balance" />
+        <option name="modeId" value="Agent" />
+        <option name="model">
+          <model>
+            <option name="modelType" value="builtin_id" />
+            <option name="modelValue" value="ensemble" />
+          </model>
+        </option>
+        <option name="targetType" value="BACKGROUND" />
+        <option name="worktreeMode" value="WORKSPACE" />
+      </template>
+    </option>
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "CidrDebugProfileConversion": "true",
+    "CidrDebugProfileConversion262": "true",
+    "RunOnceActivity.RadMigrateCodeStyle": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "copilot.chat.legacySessionMetadata.migrated": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "python.packages.toolwindow.project.migrated.to.right.top.v2": "true",
+    "settings.editor.selected.configurable": "com.github.copilot.settings.chat.ChatConfigurable"
+  }
+}]]></component>
+  <component name="SelectedDebugProfileService">{
+  &quot;profileIdByStamp&quot;: [],
+  &quot;modificationCount&quot;: 1
+}</component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ac008aa0-3e14-49e3-86cf-3439b9a98081" name="Changes" comment="" />
+      <created>1794172926551</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1794172926551</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

@@ -1,41 +1,73 @@
-#include <iostream>
-#include <vector>
+#include "assembler.h"
+
 #include "structures.h"
-#include "lexer.h"
+
+#include <filesystem>
+#include <fstream>
+#include <iostream>
+#include <sstream>
+
+namespace {
+std::string codeLine(const std::vector<int>& words) {
+    std::ostringstream output;
+    for (std::size_t i = 0; i < words.size(); ++i) {
+        if (i != 0) {
+            output << ' ';
+        }
+        output << words[i];
+    }
+    return output.str();
+}
+
+void printErrors(const std::vector<AssemblyError>& errors) {
+    for (const AssemblyError& error : errors) {
+        std::cout << "ERRO " << error.type << " (linha " << error.lineNumber
+                  << "): " << error.message << '\n';
+    }
+}
+}
 
 int main(int argc, char* argv[]) {
-    if (argc < 2) {
-        std::cout << "Uso: ./montador <arquivo.asm>" << std::endl;
+    if (argc != 2) {
+        std::cout << "Uso: montador program.asm\n";
         return 1;
     }
 
-    std::vector<LineData> parsedLines;
     std::vector<AssemblyError> errors;
-
-    // Executa a leitura e sanitização
-    parseFile(argv[1], parsedLines, errors);
-
-    // Se houver erros léxicos/sintáticos básicos encontrados nessa fase:
+    const ObjectModule object = assemble(argv[1], errors);
     if (!errors.empty()) {
-        std::cout << "--- ERROS ENCONTRADOS ---" << std::endl;
-        for (const auto& err : errors) {
-            std::cout << "Linha " << err.lineNumber << " [" << err.type << "]: " << err.message << std::endl;
-        }
-    } else {
-        std::cout << "Arquivo processado e tokenizado com sucesso!\n" << std::endl;
-        // Imprime o resultado para conferência do desenvolvedor
-        for (const auto& line : parsedLines) {
-            std::cout << "Linha " << line.originalLineNumber << " | ";
-            if (!line.label.empty()) {
-                std::cout << "Rotulo: " << line.label << " | ";
-            }
-            std::cout << "Inst/Dir: " << line.instruction << " | Args: ";
-            for (const auto& arg : line.args) {
-                std::cout << arg << " ";
-            }
-            std::cout << std::endl;
-        }
+        printErrors(errors);
+        return 1;
     }
 
+    const std::filesystem::path outputPath =
+        std::filesystem::path(argv[1]).replace_extension(OBJ_EXT);
+    std::ofstream output(outputPath);
+    if (!output) {
+        std::cout << "ERRO SEMANTICO (linha 1): nao foi possivel criar '" <<
+                     outputPath.string() << "'\n";
+        return 1;
+    }
+    if (object.isModule) {
+        for (const auto& definition : object.defs) {
+            output << "D, " << definition.first << ' ' << definition.second << '\n';
+        }
+        for (const auto& use : object.uses) {
+            output << "U, " << use.first << ' ' << use.second << '\n';
+        }
+        output << "R, ";
+        for (std::size_t i = 0; i < object.reloc.size(); ++i) {
+            if (i != 0) {
+                output << ' ';
+            }
+            output << (object.reloc[i] ? 1 : 0);
+        }
+        output << '\n';
+    }
+    output << codeLine(object.code);
+    if (!output) {
+        std::cout << "ERRO SEMANTICO (linha 1): falha ao gravar arquivo de saida\n";
+        return 1;
+    }
     return 0;
 }
